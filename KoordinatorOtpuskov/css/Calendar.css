@@ -1,36 +1,29 @@
-/*Сброс стилей*/
-body, a {
-    line-height: normal;
-    margin: 0;
-    padding: 0;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  /*list-style: none;*/
-  padding: 0;
-  margin: 0;
-}
-/*Конец Сброс стилей*/
-
+@import url('./zero.css');
 
 
 /*Глобальные стили*/
 body{
     font-family: 'Play';
+    
 }
 /*Конец Глобальные стили*/
 
-
-.futureheader{
-    background-color: rgb(255, 255, 255);
-    height: 123px;
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0px 20px 20px 0px rgba(5, 6, 22, 0.05);
+    padding: 16px 38px 16px 80px ;
 }
+
+.header__body nav{
+    display: flex;  
+    gap: 80px;
+
+    font-size: 36px;
+}
+
+a, a:visited{text-decoration: none; color: #404040;}
 
 /*Боковая панель*/
 /*Отделы*/
@@ -39,7 +32,7 @@ body{
     box-shadow: 20px 0 20px 0 rgba(5, 6, 22, 0.05);
     margin-left: 10px;
     max-width: 465px;
-    height: 800px;
+    height: 1800px;
     overflow: hidden;
 }
 

@@ -1,0 +1,11 @@
+@import url('./zero.css');
+@import url('./authorization.css');
+
+body {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+}
+
+.register-link {
+  margin-top: 20px;
+}

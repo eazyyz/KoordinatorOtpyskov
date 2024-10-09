@@ -1,0 +1,42 @@
+@import url('./zero.css');
+@import url('./authorization.css');
+
+.container {
+    margin: 100px auto;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    background-color: #EEEAEA;
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 250px;
+}
+
+.card h4 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}

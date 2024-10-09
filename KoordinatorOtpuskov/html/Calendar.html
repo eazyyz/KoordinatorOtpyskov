@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Календарь</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/Calendar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-
+    <header>
+        <div class="container">
+            <div class="header__body">
+                <img src="../img/Logo.svg" alt="">
+                <nav>
+                    <a href="#">Графики отпусков</a>
+                    <a href="#">Сотрудники</a>
+                    <a href="#">Профиль</a>
+                </nav>
+            </div>
+        </div>
+    </header>
     <div class="futureheader"></div>
-
-
     <main>
         <section class="sideplate">
             <section class="sidebar">
@@ -71,8 +81,8 @@
                         </ul>
                     </details>
                 </div>
-    
-    
+
+
                 <div class="sidebar__department">
                     <details>
                         <summary>
@@ -101,15 +111,16 @@
                         </ul>
                     </details>
                 </div>
-    
-    
-    
+
+
+
             </section>
             <button class="side-button">
-                <img src="plus.png" alt="">
+                <img src="../img/plus.png" alt="">
                 Новый отпуск
             </button>
         </section>
     </main>
 </body>
+
 </html>

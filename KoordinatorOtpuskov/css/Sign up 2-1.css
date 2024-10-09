@@ -1,0 +1,7 @@
+@import url('./zero.css');
+@import url('./authorization.css');
+
+.input-field,
+.submit-btn {
+    margin-bottom: 37px;
+}

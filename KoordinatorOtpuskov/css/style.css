@@ -1,0 +1,36 @@
+@import url('./zero.css');
+
+body {
+    background-color: #FAFBFE;
+}
+
+header {
+    z-index: 1000;
+
+    margin-bottom: 60px;
+
+    box-shadow: 0 10px 40px 0 rgb(0 0 0 / 5%);
+    background-color: #fff;
+}
+
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 38px 16px 80px ;
+}
+
+.header__body nav{
+    display: flex;  
+    gap: 80px;
+
+    font-size: 36px;
+}
+
+footer {
+    color: #1E1D1D;
+
+    text-align: center;
+    font-size: 24px;
+}
