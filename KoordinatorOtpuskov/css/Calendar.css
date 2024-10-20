@@ -4,7 +4,7 @@
 /*Глобальные стили*/
 body{
     font-family: 'Play';
-    
+    overflow: hidden;
 }
 /*Конец Глобальные стили*/
 
@@ -32,14 +32,12 @@ a, a:visited{text-decoration: none; color: #404040;}
     box-shadow: 20px 0 20px 0 rgba(5, 6, 22, 0.05);
     margin-left: 10px;
     max-width: 465px;
-    height: 1800px;
     overflow: hidden;
 }
 
 .sidebar{
     overflow-y: auto;
     margin-top: 20px;
-    max-height: 650px;
     padding-bottom: 10px;
 }
 
@@ -50,23 +48,77 @@ a, a:visited{text-decoration: none; color: #404040;}
     list-style-type: none;
     align-items: center;
     padding-right: 25px;
-    padding-left: 30px;
+    padding-left: 20px;
+    margin-left: 46px;
+    cursor: pointer;
+}
+
+.sidebar details[open] summary{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar summary span{
+    word-break: break-all;
+    max-width: 345px;
+}
+
+.sidebar details[open] summary span{
+    text-decoration-skip-ink: none;
+    text-decoration-line: underline;
+}
+
+.sidebar summary div{
+    display: flex;
 }
 
 .sidebar li{
     display: flex;
     font-size: 32px;
     margin: 29px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar li div{
+    display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.sidebar li p{
+.sidebar li div span{
+    max-width: 245px;
+    word-break: break-all;
+}
+
+.sidebar li div p{
     width: 50px;
     height: 50px;
     margin-left: 77px;
     background-color: #555;
     border-radius: 50%;
+}
+
+.sidebar li b{
+    margin-right: 29px;
+}
+
+.sidebar details[open] img{
+    display: block;
+    cursor: pointer;
+}
+
+.sidebar__department summary img{
+    padding: 13px 13px;
+    margin: 0px 3px;
+    display: none;
+}
+
+.sidebar__department summary p{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
 }
 
 .sidebar details[open] summary p{
@@ -77,16 +129,13 @@ a, a:visited{text-decoration: none; color: #404040;}
     margin-top: 20px;
 }
 
-.sidebar__department-arrow{
+.sidebar summary p{
     transform: rotate(315deg);
 }
 
-.sidebar__department summary p{
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 12px;
-}
+
+
+
 
 
 /*Цвета работников*/
@@ -121,25 +170,71 @@ a, a:visited{text-decoration: none; color: #404040;}
 
 /*Конец Отделы*/
 
-.side-button{
+/*Нижняя часть боковой панели*/
+.side__bottom{
+    width: 465px;
+    height: 133px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.side__bottom-newholidays-button{
     background-color: #4E91D5;
     color: #fff;
     font-size: 24px;
+    margin-left: 116px;
     width: 217px;
     height: 45px;
-    position: absolute;
-    left: 116px;
-    bottom: 44px;
     transition: transform;
     border: 0px;
     border-radius: 7px;
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
 }
-.side-button:active{
+.side__bottom-newholidays-button:active{
     transform: scale(0.95);
 }
-
+/*Конец Нижняя часть боковой панели*/
 
 /*Конец Боковая панель*/
+
+
+
+/*Модальные окна*/
+::backdrop{
+    background: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.modal{
+    border-radius: 50px;
+    margin-left: 12.5%;
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal__window{
+    width: 100%;
+}
+
+.modal b{
+    font-size: 64px;
+}
+
+.modal span{
+    font-size: 32px;
+}
+
+.modal__close-button{
+    cursor: pointer;
+}
+
+
+
+/*Конец Модальные окна*/

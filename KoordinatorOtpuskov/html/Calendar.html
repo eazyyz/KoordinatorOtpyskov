@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Календарь</title>
     <link rel="stylesheet" href="../css/Calendar.css">
+    <script defer src="../js/Calendar.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,30 +26,41 @@
             </div>
         </div>
     </header>
-    <div class="futureheader"></div>
     <main>
-        <section class="sideplate">
-            <section class="sidebar">
+        <section class="sideplate" id="sideplate">
+            <section class="sidebar" id="sidebar">
                 <div class="sidebar__department">
                     <details>
                         <summary>
-                            <span>
-                                Отдел маркетинга
-                            </span>
+                            <div>
+                                <img src="../img/Gear.svg" alt="" class="sidebar__department-settings-button">
+                                <span>
+                                    Отдел маркетинга
+                                </span>
+                            </div>
                             <p class="sidebar__department-arrow"></p>
                         </summary>
                         <ul>
                             <li>
-                                <p></p>
-                                Петров А. Н.
+                                <div>
+                                    <p></p>
+                                    <span>Петров А. Н.</span>
+                                </div>
+                                <b title="Отпуск согласован">С</b>
                             </li>
                             <li>
-                                <p></p>
-                                Павлова Б. А.
+                                <div>
+                                    <p></p>
+                                    <span>Павловавапвапвапвап Б. А.</span>
+                                </div>
+                                <b>Р</b>
                             </li>
                             <li>
-                                <p></p>
-                                Хромова М. Р.
+                                <div>
+                                    <p></p>
+                                    <span>Хромова М. Р.</span>
+                                </div>
+                                <b></b>
                             </li>
                         </ul>
                     </details>
@@ -56,70 +68,130 @@
                 <div class="sidebar__department">
                     <details>
                         <summary>
-                            <span>
-                                Отдел сбыта
-                            </span>
+                            <div>
+                                <img src="../img/Gear.svg" alt="" class="sidebar__department-settings-button">
+                                <span>
+                                    Отдел сбыта
+                                </span>
+                            </div>
                             <p class="sidebar__department-arrow"></p>
                         </summary>
                         <ul class="sidebar__department-users">
                             <li>
-                                <p></p>
-                                Кондратов П. И.
+                                <div>
+                                    <p></p>
+                                    Кондратов П. И.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Хомякова В.К.
+                                <div>
+                                    <p></p>
+                                    Хомякова В.К.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Яковлева В. Д.
+                                <div>
+                                    <p></p>
+                                    Яковлева В. Д.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Андреев С. И.
+                                <div>
+                                    <p></p>
+                                    Андреев С. И.
+                                </div>
+                                <b></b>
                             </li>
                         </ul>
                     </details>
                 </div>
-
-
                 <div class="sidebar__department">
                     <details>
                         <summary>
-                            <span>
-                                Отдел сбыта
-                            </span>
+                            <div>
+                                <img src="../img/Gear.svg" alt="" class="sidebar__department-settings-button">
+                                <span>
+                                    Отдел сбыта
+                                </span>
+                            </div>
                             <p class="sidebar__department-arrow"></p>
                         </summary>
                         <ul>
                             <li>
-                                <p></p>
-                                Кондратов П. И.
+                                <div>
+                                    <p></p>
+                                    Кондратов П. И.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Хомякова В.К.
+                                <div>
+                                    <p></p>
+                                    Хомякова В.К.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Яковлева В. Д.
+                                <div>
+                                    <p></p>
+                                    Яковлева В. Д.
+                                </div>
+                                <b></b>
                             </li>
                             <li>
-                                <p></p>
-                                Андреев С. И.
+                                <div>
+                                    <p></p>
+                                    Андреев С. И.
+                                </div>
+                                <b></b>
                             </li>
                         </ul>
                     </details>
                 </div>
-
-
-
             </section>
-            <button class="side-button">
-                <img src="../img/plus.png" alt="">
-                Новый отпуск
-            </button>
+            <div class="side__bottom">
+                <button class="side__bottom-newholidays-button">
+                    <img src="../img/plus.png" alt="">
+                    Новый отпуск
+                </button>
+            </div>
         </section>
+        <dialog id="modal" class="modal modal__newholidays">
+            <div class="modal__window">
+                <div>
+                    <b>
+                        Новый отпуск
+                    </b>
+                    <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
+                </div>
+                <div>
+                    <form action="">
+                        <label>
+                            <p>На сколько частей хотите поделить отпуск?</p>
+                            <input type="number" type="">
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="modal" class="modal modal__department-settings">
+            <div class="modal__window">
+                <div>
+                    <b>
+                        Настройки
+                    </b>
+                    <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
+                </div>
+                <div>
+                    <form action="">
+                        Представим, что здесь настройки
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 </body>
 
