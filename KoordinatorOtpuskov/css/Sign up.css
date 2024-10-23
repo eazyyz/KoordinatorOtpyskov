@@ -1,8 +1,13 @@
 @import url('./zero.css');
 @import url('./authorization.css');
 
+body {
+    height: 95%;
+}
+
 .container {
-    margin: 100px auto;
+    margin: auto;
+    margin-top: 2%;
 }
 
 h2 {
@@ -12,7 +17,7 @@ h2 {
 .card-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .card {
@@ -39,4 +44,21 @@ h2 {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.back-button {
+    cursor: pointer;
+    text-decoration: underline;
 }

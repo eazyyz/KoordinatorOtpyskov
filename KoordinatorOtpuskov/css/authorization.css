@@ -10,20 +10,20 @@ body {
 
 .container {
     max-width: 733px;
-    margin: 244px auto; 
+    /* margin: 244px auto;  */
     background-color: #fff;
     text-align: center;
+    margin: auto;
+    margin-top: 2%;
 }
 
 .logo img {
     max-width: 122px;
-    margin-bottom: -10px;
 }
 
 h2 {
     font-weight: 400;
     font-size: 90px;
-    margin-bottom: 22px; 
     color: black;
 }
 
