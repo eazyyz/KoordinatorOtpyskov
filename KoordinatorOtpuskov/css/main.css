@@ -1,0 +1,179 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+/*настройка основных стилей*/
+:root {
+  --button-dark-text: dark;
+  --button-blue-color: #2b80d5;
+  --button-blue-color-hover: #3d9af7;
+  --primary-color: #fe4000;
+  --button-white-text: #ffffff;
+}
+body {
+  font-family: "Play";
+  font-weight: 400;
+}
+p {
+  font-size: 20px;
+}
+/*конец настройки основных стилей*/
+
+/*стили для header*/
+.logo {
+  height: 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+.registr {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.5px;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  color: var(--button-dark-text);
+  transition: background-color 0.5s;
+}
+.registr:hover {
+  background-color: #00ffaa;
+  /* background: linear-gradient(to right, #04d58f, #00ffaa, #04d58f); */
+  border: none;
+  color: var(--button-dark-text);
+  transition: background-color 0.4s;
+}
+.enter {
+  border-radius: 5px;
+  color: var(--button-white-text);
+  background-color: var(--button-blue-color);
+  border: none;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  transition: background-color 0.8s;
+}
+.enter:hover {
+  background-color: var(--button-blue-color-hover);
+  color: var(--button-white-text);
+  transition: background-color 1s;
+}
+/*конец стилей для header*/
+
+/* основной блок */
+.main {
+  max-height: 800px;
+  margin-bottom: 60px;
+}
+.main__block {
+  text-align: center;
+  background: url(img/more.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  height: 550px;
+}
+.main__block__text {
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+.orange-text {
+  color: var(--primary-color);
+}
+#title {
+  padding-top: 30px;
+  font-size: 50px;
+  color: var(--primary-color);
+}
+#subtitle {
+  font-size: 20px;
+}
+.main__block__button {
+  border-radius: 5px;
+  background-color: var(--button-blue-color);
+  padding: 10px 30px 10px 30px;
+  border: none;
+  color: var(--button-white-text);
+  text-decoration: none;
+  transition: background-color 0.8s;
+}
+.main__block__button:hover {
+  background-color: var(--button-blue-color-hover);
+  color: var(--button-white-text);
+  transition: background-color 1s;
+}
+/*конец основного блока*/
+
+/*стили блока info*/
+.info {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.info__card img {
+  border-radius: 10px;
+  height: 250px;
+  width: 75%;
+}
+#danger {
+  color: rgb(244, 19, 19);
+}
+#convenient {
+  color: var(--button-blue-color-hover);
+}
+#after_info {
+  font-size: 30px;
+}
+#Excel {
+  font-weight: 500;
+  color: green;
+}
+/*конец стилей для блока info*/
+
+/*стили для footer*/
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__references {
+  display: flex;
+  flex-direction: column;
+}
+.footer__references__button {
+  color: var(--button-white-text);
+  padding: 15px 30px;
+  background-color: var(--button-blue-color);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.footer__references__button:hover {
+  color: var(--button-white-text);
+  padding: 15px 30px;
+  background-color: var(--button-blue-color-hover);
+}
+.footer__references__icons {
+  display: block;
+  text-align: right;
+}
+.footer__references__icons img {
+  height: 80%;
+  width: 50%;
+}
+.footer__references__icons a {
+  display: inline-block;
+}
+#Copyright {
+  text-align: center;
+  font-size: 14px;
+}
+/*конец стилей для блока footer*/
