@@ -46,7 +46,7 @@
                                     <p></p>
                                     <span>Петров А. Н.</span>
                                 </div>
-                                <b title="Отпуск согласован">С</b>
+                                <b holiday_title="Отпуск согласован">С</b>
                             </li>
                             <li>
                                 <div>
@@ -159,40 +159,102 @@
                 </button>
             </div>
         </section>
-        <dialog id="modal" class="modal modal__newholidays">
-            <div class="modal__window">
-                <div>
-                    <b>
-                        Новый отпуск
-                    </b>
-                    <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
+        <section class="calendar__section">
+            <div class="calendar">
+                <div class="header">
+                    <button id="prevMonth">
+                        <div id="prevMonth-triangle"></div>
+                    </button>
+                    <span id="currentMonth"></span>
+                    <button id="nextMonth">
+                        <div id="nextMonth-triangle"></div>
+                    </button>
                 </div>
-                <div>
-                    <form action="">
-                        <label>
-                            <p>На сколько частей хотите поделить отпуск?</p>
-                            <input type="number" type="">
-                        </label>
-                    </form>
+                <div class="days">
+                    <div class="day" data-date="">Пон</div>
+                    <div class="day" data-date="">Вто</div>
+                    <div class="day" data-date="">Сре</div>
+                    <div class="day" data-date="">Чет</div>
+                    <div class="day" data-date="">Пят</div>
+                    <div class="day" data-date="">Суб</div>
+                    <div class="day" data-date="">Вос</div>
                 </div>
+                <div class="dates" id="dates"></div>
             </div>
-        </dialog>
-        <dialog id="modal" class="modal modal__department-settings">
-            <div class="modal__window">
-                <div>
-                    <b>
-                        Настройки
-                    </b>
-                    <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
-                </div>
-                <div>
-                    <form action="">
-                        Представим, что здесь настройки
-                    </form>
-                </div>
-            </div>
-        </dialog>
+        </section>
     </main>
+    <dialog id="modal" class="modal modal__newholidays">
+        <div class="modal__window">
+            <div class="modal__window-header">
+                <b>
+                    Новый отпуск
+                </b>
+                <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
+            </div>
+            <div class="modal__window-main">
+                <form action="" method="get" class="modal__form-settings">
+                    <div class="modal__newholidays-form-first modal__form-stroke">
+                        <label class="modal__form-label">На сколько частей хотите поделить отпуск?</label>
+                        <input class="modal__newholidays-form-input modal_form-input" type="number" name="parts_of_holidays" id="modal__newholidays-unswer-parts" required>
+                    </div>
+                    <div class="modal__newholidays-form-second modal__form-stroke">
+                        <label class="modal__form-label">Первая часть отпуска с 7.10 по 7.25</label>
+                        <input class="modal__newholidays-form-input modal_form-input" type="number" name="part_1" id="modal__newholidays-unswer-part_1" required>
+                    </div>
+                    <div class="modal__newholidays-form-third modal__form-stroke">
+                        <label class="modal__form-label">Вторая часть отпуска</label>
+                        <input class="modal__newholidays-form-input modal_form-input" type="number" name="part_2" id="modal__newholidays-unswer-part_2" required>
+                    </div>
+                    <div class="modal__newholidays-form-fourth modal__form-stroke">
+                        <label class="modal__form-label">Третья часть отпуска</label>
+                        <input class="modal__newholidays-form-input modal_form-input" type="number" name="part_3" id="modal__newholidays-unswer-part_3" required>
+                    </div>
+                    <button class="modal__newholidays-sendbutton">
+                        <img src="../img/available.svg" alt="">
+                        <p>
+                            Отправить
+                        </p>
+                    </button>
+                </form>
+                <h1>
+                    Дней осталось: 13
+                </h1>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="modal" class="modal modal__department-settings">
+        <div class="modal__window">
+            <div class="modal__window-header">
+                <b>
+                    Настройки
+                </b>
+                <img src="../img/exit_x_mark.svg" alt="" class="modal__close-button">
+            </div>
+            <div class="modal__window-main">
+                <span>
+                    Отдел маркетинга
+                </span>
+                <form action="" method="get" class="modal__form-settings">
+                    <div class="modal__settings-form-first modal__form-stroke">
+                        <label class="modal__form-label">Какой процент сотрудников может уходить в отпуск одновременно?</label>
+                        <input class="modal__settings-form-input modal_form-input" type="number" name="percent_workers" id="modal__settings-unswer-percent" placeholder="30%" max="100" min="0" required>
+                    </div>
+                    <div class="modal__settings-form-second modal__form-stroke">
+                        <label class="modal__form-label">Минимальный промежуток между отпускными периодами</label>
+                        <input class="modal__settings-form-input modal_form-input" type="number" name="period_before_holidays" id="modal__settings-unswer-period" placeholder="2" required>
+                    </div>
+                    <div class="modal__settings-form-third modal__form-stroke">
+                        <label class="modal__form-label">На сколько дней можно делить отпуск?</label>
+                        <input class="modal__settings-form-input modal_form-input" type="number" name="share_vacation" id="modal__settings-unswer-share_vacation" placeholder="2" required>
+                    </div>
+                    <div class="modal__settings-form-fourth modal__form-stroke">
+                        <label class="modal__form-label">Ограничение количества дней в отпуске</label>
+                        <input class="modal__settings-form-input modal_form-input" type="number" name="limit_holiday_days" id="modal__settings-unswer-limit_days" placeholder="28" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>

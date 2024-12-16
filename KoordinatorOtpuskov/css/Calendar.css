@@ -2,10 +2,29 @@
 
 
 /*Глобальные стили*/
+
 body{
     font-family: 'Play';
     overflow: hidden;
 }
+
+main{
+    display: flex;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+
+
+
+
+
+
+
 /*Конец Глобальные стили*/
 
 .header__body{
@@ -31,7 +50,8 @@ a, a:visited{text-decoration: none; color: #404040;}
 .sideplate{
     box-shadow: 20px 0 20px 0 rgba(5, 6, 22, 0.05);
     margin-left: 10px;
-    max-width: 465px;
+    min-width: 465px;
+
     overflow: hidden;
 }
 
@@ -101,6 +121,28 @@ a, a:visited{text-decoration: none; color: #404040;}
 
 .sidebar li b{
     margin-right: 29px;
+}
+
+[holiday_title]{
+    cursor: pointer;
+}
+
+[holiday_title]:after{
+    cursor: default;
+    content: '';
+    transition: 0.2s;
+}
+
+[holiday_title]:hover:after{
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    content: attr(holiday_title);
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    z-index: 100;
 }
 
 .sidebar details[open] img{
@@ -204,6 +246,21 @@ a, a:visited{text-decoration: none; color: #404040;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Модальные окна*/
 ::backdrop{
     background: rgba(0,0,0,0.3);
@@ -223,11 +280,23 @@ a, a:visited{text-decoration: none; color: #404040;}
     width: 100%;
 }
 
+.modal__window-header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 38%;
+    margin-top: 17px;
+    margin-right: 35px;
+}
+
 .modal b{
     font-size: 64px;
 }
 
 .modal span{
+    font-size: 40px;
+}
+
+.modal form{
     font-size: 32px;
 }
 
@@ -235,6 +304,191 @@ a, a:visited{text-decoration: none; color: #404040;}
     cursor: pointer;
 }
 
+.modal__window-main{
+    margin: 20px 75px;
+}
 
+.modal__form-settings{
+    margin-top: 48px;
+}
+
+.modal__form-stroke{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.modal_form-input{
+    width: 81px;
+    height: 61px;
+    margin-left: 17px;
+    border: 1px solid #959090;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+
+
+.modal__newholidays-sendbutton{
+    background-color: #F9F9F9;
+    border: 1px solid black;
+    width: 276px;
+    border-radius: 10px;
+    height: 84px;
+    font-size: 32px;
+    justify-content: center;
+    position: absolute;
+    bottom: 29px;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+}
+
+.modal__newholidays h1{
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    font-size: 32px;
+}
+
+.modal__newholidays form img{
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+.modal__settings-form-input{
+    
+}
 
 /*Конец Модальные окна*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Начало Календарь*/
+
+
+.calendar__section{
+    width: 100%;
+}
+
+.calendar {
+    background-color: #FCFCFC;
+    margin: 76px 270px 86px 270px;
+    height: 695px;
+    max-height: 650px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#prevMonth{
+    display: ruby;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    position: relative;
+    background-color: #F9F9F9;
+    border: 1px solid #D4D4D4;
+    left: -215px;
+    top: 310px;
+}
+
+#prevMonth-triangle{
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right: 38px solid black;
+    border-bottom: 30px solid transparent;
+}
+
+#nextMonth{
+    display: ruby;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    position: relative;
+    background-color: #F9F9F9;
+    border: 1px solid #D4D4D4;
+    right: -215px;
+    top: 310px;
+}
+
+#nextMonth-triangle {
+    margin-left: 10px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-left: 38px solid black;
+    border-bottom: 30px solid transparent;
+}
+
+.header {
+    font-size: 48px;
+    font-weight: 800;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+#currentMonth:first-letter{
+    text-transform: uppercase
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    color: #008AFF;
+}
+
+.day {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.dates {
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.date {
+    font-size: 32px;
+    margin: 1px;
+    width: calc(98.2% / 7);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.date.empty {
+    cursor: default;
+}
+
+.date.selected {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+}
+
+/*Конец Календарь*/
